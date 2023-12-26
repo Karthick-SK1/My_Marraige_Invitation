@@ -59,6 +59,7 @@ body::-webkit-scrollbar {
     content: '';
     position: absolute;
     inset: 0; /* Adjust the alpha (opacity) as needed */
+    background-color:  #FFF1E6;
     backdrop-filter: blur(5px); /* Change the blur amount as desired */
     z-index: -1;
 }
