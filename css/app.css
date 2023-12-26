@@ -49,18 +49,18 @@ body::-webkit-scrollbar {
 
 .loading-page {
     position: fixed;
-    inset: 0 !important;
+    inset: 0;
     width: 100%;
     height: 100%;
-    z-index: 1056 !important;
+    z-index: 1056;
 }
 
 .loading-page::after {
     content: '';
     position: absolute;
-    inset: 0; /* Adjust the alpha (opacity) as needed */
-    background-color:  #FFF1E6;
-    backdrop-filter: blur(5px); /* Change the blur amount as desired */
+    inset: 0;
+    background-color: #FFF1E6;
+    backdrop-filter: blur(5px);
     z-index: -1;
 }
 
