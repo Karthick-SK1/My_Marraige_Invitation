@@ -201,26 +201,28 @@ const util = (() => {
     };
 
     const buka = async (button) => {
-        button.disabled = true;
-        document.querySelector('body').style.overflowY = 'scroll';
-        AOS.init();
-        audio.play();
-
+        button.disabled = true; // Disables the button that triggered this function
+        document.querySelector('body').style.overflowY = 'hidden'; // Disables vertical scrolling for the body
+        AOS.init(); // Initializes AOS (Animate on Scroll) library for animations
+        audio.play(); // Plays an audio (presumably)
+    
         if (localStorage.getItem('alertClosed')) {
-            document.getElementById('alertDiv').style.display = 'none';
+            document.getElementById('alertDiv').style.display = 'none'; // Hides an alert if it was previously closed
         }
-
-        opacity('welcome');
-        document.getElementById('tombol-musik').style.display = 'block';
-        timer();
-
-        await confetti({
-            origin: { y: 0.8 },
-            zIndex: 1057
+        opacity('welcome'); // Adjusts the opacity of an element with the ID 'welcome'
+        document.getElementById('tombol-musik').style.display = 'block'; // Displays an element with ID 'tombol-musik'
+        timer(); // Calls the 'timer' function
+    
+        await confetti({ // Initiates confetti animation with specific configurations
+            origin: { y: 0.8 }, // Confetti origin position (vertical)
+            zIndex: 1057 // Confetti layer z-index
         });
-        await session.check();
-        await animation();
+        await session.check(); // Performs a check related to a session
+        await animation(); // Executes an animation function (presumably)
+        // Once actions are completed, enable scrolling
+        document.querySelector('body').style.overflowY = 'scroll';
     };
+    
 
     const show = () => {
         tamu();

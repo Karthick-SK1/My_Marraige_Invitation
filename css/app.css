@@ -90,7 +90,7 @@ body::-webkit-scrollbar {
     width: 0.25rem;
     height: 0.625rem;
     border-radius: 25%;
-    background-color: #000000;
+    background-color: #FFF1E6;
     animation-name: scroll;
     animation-duration: 2.5s;
     animation-timing-function: linear;
