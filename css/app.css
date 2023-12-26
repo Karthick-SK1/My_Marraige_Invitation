@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
     position: absolute;
     inset: 0;
     background-color: #FFF1E6;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(100px);
     z-index: -1;
 }
 
