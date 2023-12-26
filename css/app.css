@@ -53,19 +53,18 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
     z-index: 1056;
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
 }
 
 .loading-page::after {
     content: '';
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(100px);
+    filter: blur(100px); /* Apply the blur effect */
+    opacity: 0; /* Make the element fully transparent */
     z-index: -1;
-    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
-    pointer-events: none; /* Ensures the element is non-interactive */
+    pointer-events: none; /* Ensure non-interactivity */
 }
-
-
 
 .card-body {
     overflow-wrap: break-word !important;
