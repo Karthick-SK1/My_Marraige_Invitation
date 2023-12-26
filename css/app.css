@@ -59,7 +59,7 @@ body::-webkit-scrollbar {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: #FFF1E6;
+    //background-color: #FFF1E6;
     backdrop-filter: blur(10px);
     z-index: -1;
 }
