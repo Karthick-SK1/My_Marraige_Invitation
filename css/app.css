@@ -62,6 +62,7 @@ body::-webkit-scrollbar {
     backdrop-filter: blur(100px);
     z-index: -1;
     background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+    pointer-events: none; /* Ensures the element is non-interactive */
 }
 
 
