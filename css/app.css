@@ -70,6 +70,11 @@ body::-webkit-scrollbar {
     box-sizing: content-box;
 }
 
+.text {
+   color: #000000;
+   font-family: 'Quicksand', sans-serif;
+}
+
 @keyframes scroll {
     0% {
         opacity: 0;
@@ -131,15 +136,34 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    cursor: pointer;
 }
 
 .heart {
     color: red;
-    font-size: 8rem;
+    font-size: 4rem;
     animation: breath 1.5s infinite alternate;
     vertical-align: middle;
+    transition: transform 0.5s ease-in-out;
 }
 
+.burst {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.burst .flower {
+    width: 20px; /* Adjust the flower size */
+    height: 20px; /* Adjust the flower size */
+    background-color: #ff69b4; /* Adjust the flower color */
+    position: absolute;
+    border-radius: 50%;
+    animation: burstAnimation 1s linear;
+}
 
 @keyframes breath {
     0% {
@@ -159,5 +183,16 @@ footer {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes burstAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) rotate(360deg);
     }
 }

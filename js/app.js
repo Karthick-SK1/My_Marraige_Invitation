@@ -118,6 +118,34 @@ const util = (() => {
         }, timeout);
     };
 
+    function burstWithFlowers() {
+        var heartContainer = document.getElementById('heartContainer');
+
+        // Create burst container
+        var burstContainer = document.createElement('div');
+        burstContainer.classList.add('burst');
+
+        // Add flower shapes to the burst container
+        for (var i = 0; i < 5; i++) {
+            var flower = document.createElement('div');
+            flower.classList.add('flower');
+            burstContainer.appendChild(flower);
+        }
+
+        // Append burst container to heart container
+        heartContainer.appendChild(burstContainer);
+
+        // Display burst container
+        burstContainer.style.display = 'block';
+
+        // Hide burst container after 1 second
+        setTimeout(function () {
+            burstContainer.style.display = 'none';
+            // Remove burst container from the DOM after hiding
+            heartContainer.removeChild(burstContainer);
+        }, 1000);
+    }
+    
     const timer = () => {
         let countDownDate = (new Date(document.getElementById('tampilan-waktu').getAttribute('data-waktu').replace(' ', 'T'))).getTime();
 
