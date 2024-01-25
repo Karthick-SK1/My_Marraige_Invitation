@@ -152,15 +152,13 @@ footer {
 
 
 .heart {
-    color: rgb(0, 0, 0);
+    color: black;
     font-size: 3rem;
     animation: breath 1.5s infinite alternate;
-    vertical-align: middle;
-    letter-spacing: 2px;
-    display: inline-block;
-    transition: transform 0.5s ease-in-out;
-    text-align: center; /* Center the text horizontally */
-    line-height: 1.5; /* Adjust line height for vertical centering */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Set a height for vertical centering */
 }
 
 
